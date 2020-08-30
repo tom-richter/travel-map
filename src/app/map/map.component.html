@@ -1,1 +1,16 @@
-<h1>Travel Map</h1>
+<div class="container">
+  <h1>Travel Map</h1>
+  <agm-map [latitude]="60.36557" [longitude]="5.2745263" [zoom]="8" >
+    <agm-marker [latitude]="60.36557" [longitude]="5.2745263" [title]="'Camping in Bergen'" [iconUrl]="tentIcon">
+      <agm-info-window>
+        <h1>Camping in Bergen</h1>
+        <p>This was a really nice spot.</p>
+        <img src="https://t-map.s3.eu-central-1.amazonaws.com/img/bergen-camping.jpg" width="100%">
+      </agm-info-window>
+    </agm-marker>
+    <agm-polyline  [strokeColor]="'#2196f3'">
+      <agm-polyline-point [latitude]="60.36557" [longitude]="5.2745263"></agm-polyline-point>
+      <agm-polyline-point [latitude]="61.36557" [longitude]="6.2745263"></agm-polyline-point>
+    </agm-polyline>
+  </agm-map>
+</div>
